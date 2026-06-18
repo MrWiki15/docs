@@ -1,0 +1,45 @@
+---
+title: Início rápido
+sidebarTitle: Início rápido
+description: Conecte sua primeira integração em menos de 10 minutos.
+---
+
+Este guia mostra como conectar uma integração pré-construída do catálogo de conectores. As etapas são as mesmas para a maioria dos tipos de conectores — apenas o método de autenticação varia.
+
+## Antes de começar
+
+- Função de Admin ou Member no seu workspace
+- Credenciais da ferramenta que você deseja conectar (chave de API, client ID e secret de app OAuth ou conta de serviço)
+
+## Etapas
+
+<Steps>
+  <Step title="Encontre sua integração">
+    Acesse **Integrations → Catalog** e pesquise ou navegue até a ferramenta que deseja conectar. Cada card de conector mostra o método de autenticação e as capacidades de sincronização.
+  </Step>
+  <Step title="Autentique">
+    Clique em **Connect** no conector. Dependendo do método de autenticação:
+
+    - **Chave de API** — Cole a chave no campo fornecido.
+    - **OAuth 2.0** — Clique em **Authorize** para ser redirecionado para a página de autorização da ferramenta. Faça login e conceda acesso, e você será redirecionado de volta automaticamente.
+    - **Conta de serviço** — Faça upload do arquivo de credenciais (geralmente um arquivo JSON de chave) e preencha quaisquer campos obrigatórios.
+
+    Consulte [Métodos de autenticação](/pt-BR/integrations/authentication) para detalhes sobre cada abordagem.
+  </Step>
+  <Step title="Configure o mapeamento de campos">
+    Mapeie os campos da ferramenta conectada para o modelo de dados do seu workspace. Os mapeamentos padrão são pré-preenchidos para campos comuns — revise-os e ajuste conforme necessário. Os campos obrigatórios são marcados com um asterisco.
+  </Step>
+  <Step title="Teste a conexão">
+    Clique em **Test connection** para acionar uma sincronização de amostra. O teste extrai um pequeno número de registros e os exibe para revisão. Se o teste falhar, uma mensagem de erro explicará a causa.
+  </Step>
+</Steps>
+
+<Note>
+  Alguns conectores exigem que os endereços IP de saída da plataforma estejam em allowlist no seu lado. Verifique as notas de configuração do conector para requisitos de IP antes de testar.
+</Note>
+
+## Próximos passos
+
+- Revise os [métodos de autenticação](/pt-BR/integrations/authentication) para entender quando rotacionar credenciais.
+- Explore os [conectores](/pt-BR/integrations/connectors) para detalhes de configuração específicos por categoria.
+- Configure [webhooks](/pt-BR/integrations/webhooks/configure) se precisar de automação orientada por eventos.

@@ -1,0 +1,61 @@
+---
+title: Conectar una fuente de datos
+description: Fuentes compatibles y cómo autenticar y configurar la frecuencia de sincronización.
+---
+
+Antes de poder crear paneles o ejecutar reportes, debes conectar al menos una fuente de datos. La plataforma admite bases de datos, almacenes de datos y herramientas SaaS a través de una interfaz de conexión unificada.
+
+## Fuentes compatibles
+
+<Tabs>
+  <Tab title="Bases de datos">
+    - PostgreSQL
+    - MySQL / MariaDB
+    - Microsoft SQL Server
+    - SQLite (carga de archivo)
+    - Oracle Database
+  </Tab>
+  <Tab title="Almacenes de datos">
+    - Snowflake
+    - Google BigQuery
+    - Amazon Redshift
+    - Databricks
+    - ClickHouse
+  </Tab>
+  <Tab title="Herramientas SaaS">
+    - Salesforce
+    - HubSpot
+    - Stripe
+    - Google Analytics
+    - Zendesk
+  </Tab>
+</Tabs>
+
+## Configuración de conexión
+
+Ve a **Analytics → Fuentes de datos → Agregar fuente** y completa los siguientes campos:
+
+| Campo | Descripción |
+|-------|-------------|
+| **Nombre de la fuente** | Una etiqueta legible que se usa en la interfaz. |
+| **Tipo de fuente** | Selecciona de la lista de fuentes compatibles. |
+| **Host / URL** | Nombre de host o URL del endpoint de la fuente. |
+| **Puerto** | Los puertos predeterminados se completan automáticamente para fuentes comunes. |
+| **Base de datos / Esquema** | La base de datos o esquema específico al que conectarse. |
+| **Usuario / Clave API** | Credencial de autenticación para la fuente. |
+| **Contraseña / Secreto** | Se almacena cifrada y nunca se muestra después de guardar. |
+| **Modo SSL** | Requerir, preferir o deshabilitar SSL. Requiere SSL para fuentes en producción. |
+
+Haz clic en **Probar conexión** para validar las credenciales antes de guardar. Los errores incluyen un código de motivo específico para ayudar a solucionar problemas de firewall o credenciales.
+
+## Frecuencia de sincronización
+
+Después de conectar una fuente, configura con qué frecuencia se actualizan los datos:
+
+- **Tiempo real** — Las consultas se ejecutan en vivo contra la fuente cada vez que se carga un panel. Ideal para fuentes de baja latencia con consultas indexadas.
+- **Sincronización programada** — Los datos se obtienen en un intervalo fijo (15 minutos, 1 hora, 6 horas o diario) y se almacenan en caché. Ideal para grandes volúmenes de datos o APIs con límite de tasa.
+- **Manual** — Actualizar solo cuando hagas clic en **Sincronizar ahora**. Adecuado para importaciones de datos únicas.
+
+<Info>
+  Los intervalos de sincronización programada dependen de tu plan. Los planes gratuitos solo admiten sincronización diaria.
+</Info>

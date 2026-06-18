@@ -1,0 +1,45 @@
+---
+title: Gerenciamento de usuários
+description: Convide, desative e gerencie membros da equipe em massa.
+---
+
+Os administradores podem gerenciar todo o ciclo de vida dos membros em **Settings → Users**: convidar novos membros, ajustar papéis, desativar contas e importar usuários em massa via CSV.
+
+## Convidar por e-mail
+
+1. Acesse **Settings → Users → Invite members**.
+2. Insira um ou mais endereços de e-mail, separados por vírgula.
+3. Selecione o papel do workspace a ser atribuído (Admin, Member ou Viewer).
+4. Clique em **Send invitations**.
+
+Os convidados recebem um e-mail com um link por tempo limitado. Os links expiram após 72 horas — reenvie a partir da lista de convites pendentes, se necessário.
+
+<Info>
+  Você pode sobrescrever o papel do nível do workspace em cada projeto após o membro aceitar o convite.
+</Info>
+
+## Desativação de contas
+
+A desativação de um membro revoga seu acesso imediatamente, sem excluir seus dados. Qualquer conteúdo que ele tenha criado permanece intacto e acessível para outros membros.
+
+Para desativar um membro:
+
+1. Localize o membro em **Settings → Users**.
+2. Abra o perfil dele e selecione **Deactivate account**.
+3. Confirme a ação.
+
+Contas desativadas podem ser reativadas a qualquer momento por um administrador. A reativação restaura o papel original do membro e as associações aos projetos.
+
+## Importação em massa por CSV
+
+Para equipes maiores, use a importação CSV para convidar vários membros de uma só vez.
+
+**Colunas obrigatórias:** `email`, `role`
+
+**Colunas opcionais:** `first_name`, `last_name`
+
+Baixe o template CSV na página Users, preencha e faça o upload. O sistema valida cada linha antes de enviar os convites — linhas com erros são ignoradas e listadas no resumo da importação.
+
+<Warning>
+  A importação CSV envia convites imediatamente. Revise o arquivo cuidadosamente antes do upload, especialmente as atribuições de papéis.
+</Warning>

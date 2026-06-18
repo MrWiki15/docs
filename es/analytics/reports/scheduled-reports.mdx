@@ -1,0 +1,47 @@
+---
+title: Reportes programados
+description: Entrega reportes a las bandejas de entrada con un cronograma recurrente.
+---
+
+Los reportes programados se ejecutan automáticamente con una cadencia definida y entregan los resultados a uno o más destinatarios por correo electrónico o Slack. Úsalos para eliminar la extracción manual de reportes y mantener informados a los interesados sin esfuerzo adicional.
+
+## Crear un cronograma
+
+1. Abre un reporte guardado y haz clic en **Programar entrega**.
+2. Establece la frecuencia: diaria, semanal o mensual.
+3. Elige el día y la hora (todas las horas están en la zona horaria del espacio de trabajo).
+4. Haz clic en **Siguiente** para configurar los destinatarios.
+
+## Elegir destinatarios
+
+<Tabs>
+  <Tab title="Correo electrónico">
+    Ingresa una o más direcciones de correo electrónico. Los destinatarios no necesitan ser miembros del espacio de trabajo: cualquier dirección de correo válida funciona.
+
+    La entrega incluye:
+    - Un encabezado resumen con el nombre del reporte y la hora de ejecución
+    - Una vista previa en línea de las primeras 10 filas
+    - Un enlace para ver o descargar el reporte completo
+    - Un CSV adjunto (opcional, se activa en la configuración de entrega)
+  </Tab>
+  <Tab title="Slack">
+    Conecta la integración de Slack de tu espacio de trabajo (si aún no está conectada), luego selecciona un canal o ingresa el destinatario de un mensaje directo.
+
+    El mensaje de Slack incluye una tarjeta resumen con el número de filas y las métricas clave, además de un enlace para ver el reporte completo en el navegador.
+
+    <Info>
+      La entrega por Slack requiere que la integración de Slack esté conectada. Consulta [Conectores de mensajería](/es/integrations/connectors/messaging) para ver los pasos de configuración.
+    </Info>
+  </Tab>
+</Tabs>
+
+## Administrar suscripciones
+
+Las entregas programadas se enumeran en **Analytics → Reportes → Cronogramas**. Desde allí puedes:
+
+- **Pausar** un cronograma sin eliminarlo.
+- **Editar** la frecuencia, la hora o la lista de destinatarios.
+- **Ejecutar ahora** para activar una entrega inmediata fuera de la cadencia habitual.
+- **Eliminar** para borrar el cronograma de forma permanente.
+
+Los destinatarios pueden darse de baja de los correos programados utilizando el enlace de cancelación de suscripción en el pie de cada entrega. Los administradores también pueden eliminar destinatarios desde la página de administración del cronograma.

@@ -1,0 +1,55 @@
+---
+title: Papéis e permissões
+description: Atribua e personalize o controle de acesso em todo o seu workspace e projetos.
+---
+
+A plataforma usa um modelo de controle de acesso baseado em papéis (RBAC). Os papéis são atribuídos no nível do workspace e podem ser sobrescritos no nível do projeto para um controle granular.
+
+## Papéis integrados
+
+Três papéis integrados cobrem a maioria das estruturas de equipe:
+
+<CardGroup cols={3}>
+  <Card title="Admin" icon="shield">
+    Acesso total às configurações do workspace, cobrança, todos os projetos e gerenciamento de membros. Atribua com parcimônia.
+  </Card>
+  <Card title="Member" icon="user">
+    Pode criar projetos, gerenciar conteúdo e convidar colaboradores dentro de seus projetos. Não pode acessar cobrança ou configurações do workspace.
+  </Card>
+  <Card title="Viewer" icon="eye">
+    Acesso somente leitura aos projetos aos quais é explicitamente adicionado. Não pode criar, editar ou excluir conteúdo.
+  </Card>
+</CardGroup>
+
+## Papéis personalizados
+
+Os papéis personalizados permitem definir conjuntos precisos de permissões para equipes com necessidades de acesso fora do padrão. Cada papel personalizado é construído selecionando-se a partir de uma lista de permissões granulares.
+
+Para criar um papel personalizado:
+
+1. Acesse **Settings → Roles → New role**.
+2. Atribua um nome e uma descrição opcional ao papel.
+3. Ative ou desative permissões individuais.
+4. Salve e atribua aos membros.
+
+<Info>
+  Os papéis personalizados estão disponíveis nos planos Business e Enterprise. Os administradores do workspace podem criar e gerenciar até 20 papéis personalizados.
+</Info>
+
+Padrões comuns de papéis personalizados:
+
+- **Data analyst** — Acesso de leitura a dashboards e relatórios de analytics, sem acesso a configurações ou ao gerenciamento de usuários.
+- **Integration manager** — Acesso total a integrações e conectores, acesso somente leitura aos projetos.
+- **Billing contact** — Acesso apenas às configurações de cobrança, sem acesso aos dados do workspace.
+
+## Sobrescritas por projeto
+
+O papel de um membro no nível do workspace pode ser sobrescrito para projetos específicos. Os papéis no nível do projeto têm precedência total dentro daquele projeto.
+
+Para atribuir um papel por projeto:
+
+1. Abra o projeto e acesse **Settings → Members**.
+2. Localize o membro e selecione um papel no menu suspenso.
+3. Salve as alterações.
+
+Remover uma sobrescrita por projeto reverte o membro para o papel do nível do workspace naquele projeto.

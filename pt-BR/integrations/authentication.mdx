@@ -1,0 +1,48 @@
+---
+title: Métodos de autenticação
+description: Opções de chave de API, OAuth 2.0 e conta de serviço para conectar integrações.
+---
+
+Diferentes integrações utilizam métodos de autenticação diferentes. Escolher o método correto — e gerenciar as credenciais adequadamente — afeta tanto a segurança quanto a confiabilidade.
+
+## Chaves de API
+
+Chaves de API são tokens de longa duração emitidos pelo serviço externo. São o método de autenticação mais simples e funcionam bem para conexões servidor a servidor onde OAuth não está disponível.
+
+**Quando usar:** Serviços que emitem tokens de acesso pessoal ou chaves de API (a maioria das ferramentas de desenvolvimento, APIs de dados).
+
+**Como rotacionar:**
+
+1. Gere uma nova chave no serviço externo.
+2. Acesse **Integrations → [Nome da integração] → Credentials**.
+3. Cole a nova chave e clique em **Save**.
+4. Verifique se a conexão ainda funciona e, em seguida, revogue a chave antiga no serviço externo.
+
+<Warning>
+  Rotacionar uma chave enquanto a antiga ainda está em uso causa um breve período de sincronizações com falha. Minimize isso salvando a nova chave primeiro e revogando a chave antiga somente após verificar a conexão.
+</Warning>
+
+## OAuth 2.0
+
+O OAuth 2.0 permite que os usuários autorizem a plataforma a agir em seu nome sem compartilhar uma senha. A plataforma gerencia o ciclo de atualização do token automaticamente.
+
+**Quando usar:** Ferramentas SaaS que suportam OAuth (CRMs, ferramentas de produtividade, plataformas de comunicação).
+
+**Como funciona:**
+
+1. Clique em **Authorize** na página de configuração do conector.
+2. Você é redirecionado para a tela de autorização do serviço.
+3. Faça login e aprove as permissões solicitadas.
+4. A plataforma armazena o access token e o refresh token com segurança.
+
+Os tokens OAuth expiram regularmente. A plataforma os atualiza automaticamente antes do vencimento. Se a atualização falhar (por exemplo, porque as permissões foram revogadas), a integração exibirá um aviso de **Reconnect**.
+
+## Contas de serviço
+
+Contas de serviço são identidades não pessoais criadas no sistema externo especificamente para acesso máquina a máquina. Comuns no Google Cloud, AWS e plataformas SaaS corporativas.
+
+**Quando usar:** Situações em que o acesso não deve estar vinculado a um usuário individual (evita interrupções se um funcionário sair) ou quando o serviço não suporta OAuth.
+
+**Configuração:** Faça upload do arquivo de credenciais (geralmente uma chave JSON ou certificado) na caixa de diálogo de configuração do conector. A plataforma o armazena criptografado e o utiliza para autenticar todas as requisições.
+
+**Rotação:** Gere uma nova chave de conta de serviço no serviço externo, faça upload no conector, verifique a conexão e, em seguida, desative a chave antiga.

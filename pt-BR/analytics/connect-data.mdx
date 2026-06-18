@@ -1,0 +1,61 @@
+---
+title: Conectar uma fonte de dados
+description: Fontes suportadas e como autenticar e configurar a frequência de sincronização.
+---
+
+Antes de criar dashboards ou executar relatórios, você precisa conectar pelo menos uma fonte de dados. A plataforma suporta bancos de dados, data warehouses e ferramentas SaaS por meio de uma interface de conexão unificada.
+
+## Fontes suportadas
+
+<Tabs>
+  <Tab title="Bancos de dados">
+    - PostgreSQL
+    - MySQL / MariaDB
+    - Microsoft SQL Server
+    - SQLite (upload de arquivo)
+    - Oracle Database
+  </Tab>
+  <Tab title="Data warehouses">
+    - Snowflake
+    - Google BigQuery
+    - Amazon Redshift
+    - Databricks
+    - ClickHouse
+  </Tab>
+  <Tab title="Ferramentas SaaS">
+    - Salesforce
+    - HubSpot
+    - Stripe
+    - Google Analytics
+    - Zendesk
+  </Tab>
+</Tabs>
+
+## Configurações de conexão
+
+Acesse **Analytics → Data sources → Add source** e preencha os seguintes campos:
+
+| Campo | Descrição |
+|-------|-----------|
+| **Source name** | Um rótulo legível usado na interface. |
+| **Source type** | Selecione na lista de fontes suportadas acima. |
+| **Host / URL** | Hostname ou URL do endpoint da fonte. |
+| **Port** | Portas padrão são pré-preenchidas para fontes comuns. |
+| **Database / Schema** | O banco de dados ou schema específico ao qual conectar. |
+| **Username / API key** | Credencial de autenticação da fonte. |
+| **Password / Secret** | Armazenado criptografado e nunca exibido após salvar. |
+| **SSL mode** | Exigir, preferir ou desabilitar SSL. Exija SSL para fontes em produção. |
+
+Clique em **Test connection** para validar as credenciais antes de salvar. Os erros incluem um código de motivo específico para ajudar a solucionar problemas de firewall ou credenciais.
+
+## Frequência de sincronização
+
+Após conectar uma fonte, configure com que frequência os dados são atualizados:
+
+- **Tempo real** — As consultas são executadas ao vivo na fonte a cada carregamento de dashboard. Ideal para fontes de baixa latência com consultas indexadas.
+- **Sincronização agendada** — Os dados são buscados em um intervalo fixo (15 minutos, 1 hora, 6 horas ou diariamente) e armazenados em cache. Ideal para grandes conjuntos de dados ou APIs com limite de taxa.
+- **Manual** — Atualiza apenas quando você clica em **Sync now**. Adequado para importações pontuais de dados.
+
+<Info>
+  Os intervalos de sincronização agendada dependem do seu plano. Planos gratuitos suportam apenas sincronização diária.
+</Info>

@@ -1,0 +1,47 @@
+---
+title: Relatórios agendados
+description: Entregue relatórios em caixas de entrada em uma programação recorrente.
+---
+
+Os relatórios agendados são executados automaticamente em uma cadência definida e entregam os resultados a um ou mais destinatários por e-mail ou Slack. Use-os para eliminar extrações manuais de relatórios e manter as partes interessadas informadas sem esforço adicional.
+
+## Criar uma programação
+
+1. Abra um relatório salvo e clique em **Schedule delivery**.
+2. Defina a frequência: diária, semanal ou mensal.
+3. Escolha o dia e a hora (todos os horários estão no fuso horário do workspace).
+4. Clique em **Next** para configurar os destinatários.
+
+## Escolher os destinatários
+
+<Tabs>
+  <Tab title="E-mail">
+    Informe um ou mais endereços de e-mail. Os destinatários não precisam ser membros do workspace — qualquer endereço de e-mail válido funciona.
+
+    A entrega inclui:
+    - Um cabeçalho de resumo com o nome do relatório e o horário de execução
+    - Uma prévia inline das primeiras 10 linhas
+    - Um link para visualizar ou baixar o relatório completo
+    - Um CSV anexado (opcional — ative nas configurações de entrega)
+  </Tab>
+  <Tab title="Slack">
+    Conecte a integração com Slack do seu workspace (se ainda não estiver conectada), depois selecione um canal ou informe um destinatário de mensagem direta.
+
+    A mensagem do Slack inclui um card de resumo com a contagem de linhas e métricas-chave, além de um link para visualizar o relatório completo no navegador.
+
+    <Info>
+      A entrega via Slack requer que a integração com o Slack esteja conectada. Consulte [Conectores de mensageria](/pt-BR/integrations/connectors/messaging) para as etapas de configuração.
+    </Info>
+  </Tab>
+</Tabs>
+
+## Gerenciar inscrições
+
+As entregas agendadas estão listadas em **Analytics → Reports → Schedules**. A partir daí, você pode:
+
+- **Pausar** uma programação sem excluí-la.
+- **Editar** a frequência, o horário ou a lista de destinatários.
+- **Executar agora** para acionar uma entrega imediata fora da cadência regular.
+- **Excluir** para remover permanentemente a programação.
+
+Os destinatários podem cancelar a inscrição nos e-mails agendados usando o link de cancelamento no rodapé de cada entrega. Os admins também podem remover destinatários na página de gerenciamento de programações.
