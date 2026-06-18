@@ -1,0 +1,38 @@
+---
+title: Conceptos clave
+description: "Los componentes básicos de la plataforma: espacios de trabajo, proyectos, roles y acceso a la API."
+---
+
+Entender el modelo central facilita seguir cualquier otra guía. Esta página explica los cuatro conceptos fundamentales que encontrarás a lo largo de la plataforma.
+
+## Espacios de trabajo
+
+Un espacio de trabajo es el contenedor de nivel superior de tu organización. Aloja todos los proyectos, miembros, configuraciones e información de facturación. Cada usuario pertenece al menos a un espacio de trabajo, y cada uno opera de forma independiente con su propia configuración y datos.
+
+Los espacios de trabajo se identifican mediante un slug único que se usa en las URL y las llamadas a la API.
+
+## Proyectos
+
+Los proyectos son la unidad principal de trabajo dentro de un espacio de trabajo. Cada proyecto tiene sus propios miembros, configuración y datos. Puedes crear tantos proyectos como necesites, y un mismo usuario puede pertenecer a varios proyectos con un rol distinto en cada uno.
+
+<Info>
+  Las anulaciones de rol a nivel de proyecto tienen prioridad sobre los roles a nivel de espacio de trabajo. A un usuario que es Lector en el espacio de trabajo se le puede otorgar acceso de Administrador en un proyecto específico.
+</Info>
+
+## Miembros y roles
+
+A cada miembro del espacio de trabajo se le asigna un rol que controla lo que puede ver y hacer:
+
+| Rol | Descripción |
+|------|-------------|
+| **Administrador** | Acceso total a la configuración del espacio de trabajo, la facturación y todos los proyectos. Puede invitar y eliminar miembros. |
+| **Miembro** | Puede crear y administrar los proyectos a los que pertenece. No puede acceder a la facturación ni a la configuración del espacio de trabajo. |
+| **Lector** | Acceso de solo lectura a los proyectos a los que se le añade. No puede crear ni modificar contenido. |
+
+Los roles personalizados con permisos granulares están disponibles en planes superiores. Consulta [roles y permisos](/es/platform/administration/roles-permissions) para más detalles.
+
+## Credenciales de la API
+
+Las claves de API permiten que herramientas y servicios externos interactúen con tu espacio de trabajo de forma programática. Cada clave está vinculada a un espacio de trabajo específico y se puede restringir a acceso de solo lectura o de lectura y escritura.
+
+Trata las claves de API como secretos: rótalas de inmediato si quedan expuestas. Consulta la referencia de la API para los detalles de autenticación y la documentación de endpoints.

@@ -1,0 +1,45 @@
+---
+title: Gestión de usuarios
+description: Invita, desactiva y administra miembros del equipo de forma masiva.
+---
+
+Los administradores pueden gestionar el ciclo de vida completo de los miembros desde **Configuración → Usuarios**: invitar nuevos miembros, ajustar roles, desactivar cuentas e importar usuarios de forma masiva mediante CSV.
+
+## Invitar por correo electrónico
+
+1. Ve a **Configuración → Usuarios → Invitar miembros**.
+2. Introduce una o más direcciones de correo electrónico, separadas por comas.
+3. Selecciona el rol del espacio de trabajo que se asignará (Administrador, Miembro o Lector).
+4. Haz clic en **Enviar invitaciones**.
+
+Las personas invitadas reciben un correo con un enlace de tiempo limitado. Los enlaces caducan a las 72 horas; reenvíalos desde la lista de invitaciones pendientes si es necesario.
+
+<Info>
+  Puedes anular el rol del espacio de trabajo en cada proyecto después de que el miembro acepte su invitación.
+</Info>
+
+## Desactivar cuentas
+
+Desactivar a un miembro revoca su acceso de inmediato sin eliminar sus datos. El contenido que haya creado permanece intacto y accesible para los demás miembros.
+
+Para desactivar a un miembro:
+
+1. Busca al miembro en **Configuración → Usuarios**.
+2. Abre su perfil y selecciona **Desactivar cuenta**.
+3. Confirma la acción.
+
+Un administrador puede reactivar las cuentas desactivadas en cualquier momento. Al reactivarlas, se restablecen el rol original del miembro y sus membresías de proyecto.
+
+## Importación masiva por CSV
+
+Para equipos grandes, usa la importación por CSV para invitar a varios miembros a la vez.
+
+**Columnas requeridas:** `email`, `role`
+
+**Columnas opcionales:** `first_name`, `last_name`
+
+Descarga la plantilla CSV desde la página de Usuarios, complétala y súbela. El sistema valida cada fila antes de enviar las invitaciones; las filas con errores se omiten y se listan en el resumen de la importación.
+
+<Warning>
+  La importación por CSV envía las invitaciones de inmediato. Revisa el archivo cuidadosamente antes de subirlo, especialmente las asignaciones de roles.
+</Warning>

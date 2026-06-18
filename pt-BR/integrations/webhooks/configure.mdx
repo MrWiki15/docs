@@ -1,0 +1,54 @@
+---
+title: Configurar webhooks
+description: Registre um endpoint e selecione os eventos a receber.
+---
+
+Os webhooks entregam requisições HTTP POST para uma URL controlada por você sempre que um evento selecionado ocorre no seu workspace. Este guia orienta a configuração de um novo endpoint de webhook de ponta a ponta.
+
+## Etapas
+
+<Steps>
+  <Step title="Crie a URL do seu endpoint">
+    Seu endpoint deve ser uma URL HTTPS publicamente acessível que retorne um código de status `2xx` em até 10 segundos após receber uma requisição. Se o seu servidor demorar mais para processar, confirme o recebimento do webhook imediatamente e trate o processamento de forma assíncrona.
+
+    A maioria dos frameworks receptores de webhook (por exemplo, ngrok para testes locais ou cloud functions para produção) fornece URLs HTTPS automaticamente.
+  </Step>
+  <Step title="Registre o endpoint">
+    1. Acesse **Integrations → Webhooks → Add endpoint**.
+    2. Informe sua URL HTTPS.
+    3. Adicione uma descrição opcional para lembrar para que serve esse endpoint.
+    4. Clique em **Create**.
+  </Step>
+  <Step title="Selecione os eventos">
+    Após criar o endpoint, abra-o e clique em **Add events**. Escolha os tipos de evento que este endpoint deve receber. Você pode se inscrever em todos os eventos ou selecionar tipos individuais.
+
+    Consulte [tipos de evento](/pt-BR/integrations/webhooks/event-types) para a lista completa e os schemas de payload.
+  </Step>
+  <Step title="Verifique o cabeçalho de assinatura">
+    Toda requisição de webhook inclui um cabeçalho `X-Signature-256` contendo uma assinatura HMAC-SHA256 do corpo da requisição, assinada com a chave secreta do seu endpoint.
+
+    Verifique esse cabeçalho no seu receptor antes de processar o payload:
+
+    ```python
+    import hmac
+    import hashlib
+
+    def verify_signature(payload_body, secret, signature_header):
+        expected = hmac.new(
+            secret.encode(),
+            payload_body,
+            hashlib.sha256
+        ).hexdigest()
+        return hmac.compare_digest(f"sha256={expected}", signature_header)
+    ```
+
+    O secret do seu endpoint é exibido apenas uma vez no momento da criação — guarde-o com segurança.
+  </Step>
+  <Step title="Teste com um payload de exemplo">
+    Na página de detalhes do endpoint, clique em **Send test event**. Selecione um tipo de evento e clique em **Send**. A plataforma entrega um payload de exemplo ao seu endpoint e exibe o status e o corpo da resposta no log de testes.
+  </Step>
+</Steps>
+
+<Warning>
+  Não exponha o secret do seu endpoint em código do lado do cliente ou em repositórios públicos. Rotacione-o imediatamente caso seja comprometido — acesse **Integrations → Webhooks → [Endpoint] → Rotate secret**.
+</Warning>

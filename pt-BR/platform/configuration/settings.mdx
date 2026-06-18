@@ -1,0 +1,46 @@
+---
+title: Configurações gerais
+description: Configure o nome do workspace, o fuso horário e as preferências de exibição.
+---
+
+As configurações gerais controlam como seu workspace é identificado, como datas e horários são exibidos e quais comportamentos de notificação se aplicam por padrão a todos os membros.
+
+Acesse **Settings → General** para visualizar essas opções.
+
+## Geral
+
+| Configuração | Descrição |
+|---------|-------------|
+| **Workspace name** | O nome de exibição usado na interface, em notificações por e-mail e em links compartilhados. |
+| **Workspace slug** | O identificador seguro para URL usado em chamadas de API. Alterá-lo atualiza todas as URLs — avise sua equipe antes de fazer essa mudança. |
+| **Timezone** | O fuso horário padrão para exibição de datas e jobs agendados. Os membros podem sobrescrever isso em suas preferências pessoais. |
+| **Language** | O idioma de exibição padrão para novos membros. |
+
+## Segurança
+
+<Tabs>
+  <Tab title="Configurações de sessão">
+    Controle por quanto tempo as sessões autenticadas permanecem ativas. Durações de sessão mais curtas reduzem o risco em caso de perda de um dispositivo, mas exigem logins mais frequentes.
+
+    - **Session timeout** — Sessões ociosas são encerradas após esse período. O padrão é 7 dias.
+    - **Force re-authentication** — Exige confirmação por senha ou SSO antes de acessar configurações sensíveis.
+  </Tab>
+  <Tab title="Lista de IPs permitidos">
+    Restrinja o acesso a faixas de IP específicas. Quando habilitado, usuários fora da lista de permissões não podem se autenticar, mesmo com credenciais válidas.
+
+    <Warning>
+      Verifique se o seu próprio IP está incluído antes de habilitar a lista de permissões — você pode acabar bloqueando o próprio acesso.
+    </Warning>
+  </Tab>
+  <Tab title="SSO">
+    Conecte um provedor de identidade SAML 2.0 ou OIDC para centralizar a autenticação. Após a aplicação obrigatória do SSO, o login baseado em senha é desativado para todos os membros que não sejam administradores.
+  </Tab>
+</Tabs>
+
+## Padrões de notificação
+
+Estas configurações se aplicam a todos os novos membros. Os membros existentes mantêm suas preferências pessoais de notificação, a menos que você as redefina.
+
+- **Email digests** — Resumos diários ou semanais da atividade nos projetos aos quais o membro pertence.
+- **Mention alerts** — E-mail imediato quando um membro é mencionado com @ em um comentário ou tarefa.
+- **Project updates** — Notifica os membros quando um projeto ao qual pertencem muda de status.

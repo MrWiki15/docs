@@ -1,0 +1,46 @@
+---
+title: Conectores de CRM
+description: Sincronize contatos, negócios e atividades do seu CRM.
+---
+
+Os conectores de CRM trazem registros de contatos, pipelines de negócios e histórico de atividades para o seu workspace, permitindo criar dashboards e relatórios sobre seus dados de vendas sem escrever código personalizado.
+
+## Sistemas de CRM suportados
+
+- Salesforce
+- HubSpot
+- Pipedrive
+- Zoho CRM
+- Microsoft Dynamics 365
+
+## Etapas de configuração
+
+<Steps>
+  <Step title="Conecte seu CRM">
+    Acesse **Integrations → Catalog → CRM**, selecione seu sistema e clique em **Connect**. Autentique-se usando OAuth 2.0 (a maioria dos sistemas) ou uma chave de API (Pipedrive e algumas configurações do Zoho).
+  </Step>
+  <Step title="Selecione os objetos para sincronizar">
+    Escolha quais objetos do CRM importar: Contatos, Empresas, Negócios, Atividades ou objetos personalizados. Apenas os objetos selecionados contam para os seus limites de registros.
+  </Step>
+  <Step title="Configure o mapeamento de campos">
+    Mapeie os campos do CRM para o modelo de dados da plataforma. Campos padrão (nome, e-mail, estágio, data de fechamento) são mapeados automaticamente. Campos personalizados do CRM podem ser mapeados manualmente no editor de mapeamento de campos.
+  </Step>
+  <Step title="Execute a sincronização inicial">
+    Clique em **Start sync**. A primeira sincronização importa todos os registros históricos e pode levar vários minutos para conjuntos de dados grandes. As sincronizações subsequentes são incrementais.
+  </Step>
+</Steps>
+
+## Mapeamento de campos
+
+O editor de mapeamento de campos mostra todos os campos disponíveis do seu CRM à esquerda e os campos de destino da plataforma à direita. Arraste um campo do CRM para o campo de destino correspondente para criar um mapeamento.
+
+Campos não mapeados não são sincronizados. Você pode voltar ao editor de mapeamento a qualquer momento para adicionar ou remover mapeamentos — as alterações entram em vigor na próxima sincronização.
+
+## Intervalos de sincronização
+
+| Intervalo | Caso de uso |
+|-----------|-------------|
+| **Tempo real (baseado em webhook)** | Disponível para Salesforce e HubSpot. Alterações no CRM acionam um evento de sincronização imediato. |
+| **A cada 15 minutos** | Ideal para equipes de vendas ativas que precisam de dados quase em tempo real. |
+| **Por hora** | Adequado para a maioria dos casos de uso de relatórios. |
+| **Diário** | Melhor para conjuntos de dados estáveis ou sincronizações de baixa prioridade. |

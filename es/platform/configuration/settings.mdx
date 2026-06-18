@@ -1,0 +1,46 @@
+---
+title: Configuración general
+description: Configura el nombre del espacio de trabajo, la zona horaria y las preferencias de visualización.
+---
+
+La configuración general controla cómo se identifica tu espacio de trabajo, cómo se muestran las fechas y horas, y qué comportamientos de notificación se aplican por defecto a todos los miembros.
+
+Ve a **Configuración → General** para acceder a estas opciones.
+
+## General
+
+| Configuración | Descripción |
+|---------|-------------|
+| **Nombre del espacio de trabajo** | El nombre para mostrar que se usa en la interfaz, las notificaciones por correo y los enlaces compartidos. |
+| **Slug del espacio de trabajo** | El identificador apto para URL que se usa en las llamadas a la API. Cambiarlo actualiza todas las URL; avisa a tu equipo antes de hacerlo. |
+| **Zona horaria** | La zona horaria predeterminada para mostrar fechas y ejecutar trabajos programados. Los miembros pueden anularla en sus preferencias personales. |
+| **Idioma** | El idioma de visualización predeterminado para los nuevos miembros. |
+
+## Seguridad
+
+<Tabs>
+  <Tab title="Configuración de sesión">
+    Controla cuánto tiempo permanecen activas las sesiones autenticadas. Duraciones de sesión más cortas reducen el riesgo si se pierde un dispositivo, pero exigen iniciar sesión con más frecuencia.
+
+    - **Tiempo de inactividad de la sesión** — Las sesiones inactivas se cierran tras este período. Por defecto, 7 días.
+    - **Forzar reautenticación** — Requiere confirmar la contraseña o el SSO antes de acceder a la configuración sensible.
+  </Tab>
+  <Tab title="Lista de IPs permitidas">
+    Restringe el acceso a rangos de IP específicos. Cuando se habilita, los usuarios fuera de la lista no pueden autenticarse, incluso con credenciales válidas.
+
+    <Warning>
+      Verifica que tu propia IP esté incluida antes de habilitar la lista; podrías dejarte fuera tú mismo.
+    </Warning>
+  </Tab>
+  <Tab title="SSO">
+    Conecta un proveedor de identidad SAML 2.0 u OIDC para centralizar la autenticación. Una vez que se obliga el uso de SSO, se deshabilita el inicio de sesión con contraseña para todos los miembros que no sean administradores.
+  </Tab>
+</Tabs>
+
+## Notificaciones predeterminadas
+
+Estas configuraciones se aplican a todos los nuevos miembros. Los miembros existentes conservan sus preferencias personales de notificaciones, a menos que las restablezcas.
+
+- **Resúmenes por correo** — Resúmenes diarios o semanales de la actividad en los proyectos a los que pertenece el miembro.
+- **Alertas de menciones** — Correo inmediato cuando se menciona a un miembro con @ en un comentario o tarea.
+- **Actualizaciones de proyecto** — Notifica a los miembros cuando un proyecto al que pertenecen cambia de estado.

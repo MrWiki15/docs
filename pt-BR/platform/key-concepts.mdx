@@ -1,0 +1,38 @@
+---
+title: Conceitos principais
+description: Os blocos de construção da plataforma — workspaces, projetos, papéis e acesso à API.
+---
+
+Compreender o modelo central facilita o acompanhamento de todos os outros guias. Esta página explica os quatro conceitos fundamentais que você encontrará em toda a plataforma.
+
+## Workspaces
+
+Um workspace é o contêiner de nível mais alto da sua organização. Ele contém todos os projetos, membros, configurações e informações de cobrança. Cada usuário pertence a pelo menos um workspace, e cada workspace opera de forma independente, com sua própria configuração e seus próprios dados.
+
+Os workspaces são identificados por um slug exclusivo usado em URLs e chamadas de API.
+
+## Projetos
+
+Projetos são a unidade principal de trabalho dentro de um workspace. Cada projeto tem seus próprios membros, configurações e dados. Você pode criar quantos projetos precisar, e o mesmo usuário pode pertencer a vários projetos com papéis diferentes em cada um.
+
+<Info>
+  Sobrescritas de papel no nível do projeto têm precedência sobre os papéis no nível do workspace. Um usuário que é Viewer no nível do workspace pode receber acesso de Admin em um projeto específico.
+</Info>
+
+## Membros e papéis
+
+Cada membro do workspace recebe um papel que controla o que ele pode ver e fazer:
+
+| Papel | Descrição |
+|------|-------------|
+| **Admin** | Acesso total às configurações do workspace, cobrança e todos os projetos. Pode convidar e remover membros. |
+| **Member** | Pode criar e gerenciar projetos aos quais pertence. Não pode acessar cobrança ou configurações no nível do workspace. |
+| **Viewer** | Acesso somente leitura aos projetos aos quais é adicionado. Não pode criar ou modificar conteúdo. |
+
+Papéis personalizados com permissões granulares estão disponíveis em planos de nível superior. Consulte [papéis e permissões](/pt-BR/platform/administration/roles-permissions) para detalhes.
+
+## Credenciais de API
+
+As chaves de API permitem que ferramentas e serviços externos interajam com seu workspace de forma programática. Cada chave é restrita a um workspace específico e pode ser limitada a acesso somente leitura ou de leitura e escrita.
+
+Trate as chaves de API como segredos — rotacione-as imediatamente se forem expostas. Consulte a referência da API para detalhes de autenticação e documentação dos endpoints.

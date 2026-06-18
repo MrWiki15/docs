@@ -1,0 +1,55 @@
+---
+title: Roles y permisos
+description: Asigna y personaliza el control de acceso en tu espacio de trabajo y proyectos.
+---
+
+La plataforma usa un modelo de control de acceso basado en roles (RBAC). Los roles se asignan a nivel de espacio de trabajo y pueden anularse a nivel de proyecto para un control más granular.
+
+## Roles integrados
+
+Tres roles integrados cubren la mayoría de las estructuras de equipo:
+
+<CardGroup cols={3}>
+  <Card title="Administrador" icon="shield">
+    Acceso total a la configuración del espacio de trabajo, la facturación, todos los proyectos y la gestión de miembros. Asígnalo con moderación.
+  </Card>
+  <Card title="Miembro" icon="user">
+    Puede crear proyectos, administrar contenido e invitar a colaboradores dentro de sus proyectos. No puede acceder a la facturación ni a la configuración del espacio de trabajo.
+  </Card>
+  <Card title="Lector" icon="eye">
+    Acceso de solo lectura a los proyectos a los que se le añade explícitamente. No puede crear, editar ni eliminar contenido.
+  </Card>
+</CardGroup>
+
+## Roles personalizados
+
+Los roles personalizados te permiten definir conjuntos precisos de permisos para equipos con necesidades de acceso no estándar. Cada rol personalizado se construye seleccionando de una lista de permisos granulares.
+
+Para crear un rol personalizado:
+
+1. Ve a **Configuración → Roles → Nuevo rol**.
+2. Asigna al rol un nombre y, opcionalmente, una descripción.
+3. Activa o desactiva los permisos individualmente.
+4. Guarda y asígnalo a los miembros.
+
+<Info>
+  Los roles personalizados están disponibles en los planes Business y Enterprise. Los administradores del espacio de trabajo pueden crear y administrar hasta 20 roles personalizados.
+</Info>
+
+Patrones comunes de roles personalizados:
+
+- **Analista de datos** — Acceso de lectura a dashboards y reportes de analítica, sin acceso a la configuración ni a la gestión de usuarios.
+- **Gestor de integraciones** — Acceso total a integraciones y conectores, acceso de solo lectura a los proyectos.
+- **Contacto de facturación** — Acceso únicamente a la configuración de facturación, sin acceso a los datos del espacio de trabajo.
+
+## Anulaciones por proyecto
+
+El rol de un miembro a nivel de espacio de trabajo puede anularse para proyectos específicos. Los roles a nivel de proyecto tienen prioridad total dentro de ese proyecto.
+
+Para asignar un rol específico de proyecto:
+
+1. Abre el proyecto y ve a **Configuración → Miembros**.
+2. Busca al miembro y selecciona un rol en el menú desplegable.
+3. Guarda los cambios.
+
+Al quitar una anulación por proyecto, el miembro vuelve a su rol a nivel de espacio de trabajo para ese proyecto.
