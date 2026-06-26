@@ -1,0 +1,29 @@
+---
+title: "Liquidez y prefunding"
+sidebarTitle: "Liquidez y prefunding"
+description: "Cómo Kawi mantiene fondos preposicionados para liquidaciones casi instantáneas."
+---
+
+Para que Kawi pueda liquidar operaciones rápidamente, necesita **liquidez disponible**.
+
+La liquidez es el dinero o stablecoins disponibles para ejecutar conversiones sin esperar demasiado.
+
+## Ejemplo
+
+Si un usuario deposita BRL y quiere recibir USDC, Kawi necesita tener acceso a USDC disponible.
+
+## Prefunding
+
+El prefunding consiste en tener fondos preposicionados antes de que llegue la operación.
+
+```text
+Kawi mantiene USDC disponible
+          ↓
+Usuario deposita fiat
+          ↓
+Kawi entrega rápidamente
+          ↓
+La tesorería se rebalancea después
+```
+
+Esto permite mejorar la velocidad de liquidación y ofrecer una experiencia casi instantánea.

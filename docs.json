@@ -44,38 +44,14 @@
         },
         "groups": [
           {
-            "group": "Platform",
-            "icon": "layers",
-            "expanded": true,
-            "pages": [
-              "platform/quickstart",
-              "platform/key-concepts",
-              "platform/configuration/settings",
-              "platform/configuration/user-management",
-              "platform/administration/roles-permissions"
-            ]
+            "group": "Introduction",
+            "icon": "book-open",
+            "pages": []
           },
           {
-            "group": "Analytics",
-            "icon": "chart-bar",
-            "expanded": true,
-            "pages": [
-              "analytics/quickstart",
-              "analytics/connect-data",
-              "analytics/dashboards/create-dashboard",
-              "analytics/reports/scheduled-reports"
-            ]
-          },
-          {
-            "group": "Integrations",
-            "icon": "plug",
-            "expanded": true,
-            "pages": [
-              "integrations/quickstart",
-              "integrations/authentication",
-              "integrations/connectors/crm",
-              "integrations/webhooks/configure"
-            ]
+            "group": "Accounts",
+            "icon": "user",
+            "pages": []
           }
         ]
       },
@@ -102,37 +78,122 @@
         },
         "groups": [
           {
-            "group": "Plataforma",
-            "icon": "layers",
-            "expanded": true,
+            "group": "Introducción",
+            "icon": "book-open",
             "pages": [
-              "es/platform/quickstart",
-              "es/platform/key-concepts",
-              "es/platform/configuration/settings",
-              "es/platform/configuration/user-management",
-              "es/platform/administration/roles-permissions"
+              "es/introduction/what-is-kawi.mdx",
+              "es/introduction/problem.mdx",
+              "es/introduction/what-you-can-do.mdx",
+              "es/introduction/validation.mdx"
             ]
           },
           {
-            "group": "Analítica",
-            "icon": "chart-bar",
-            "expanded": true,
+            "group": "Cuentas",
+            "icon": "user",
             "pages": [
-              "es/analytics/quickstart",
-              "es/analytics/connect-data",
-              "es/analytics/dashboards/create-dashboard",
-              "es/analytics/reports/scheduled-reports"
+              "es/accounts/account-types.mdx",
+              "es/accounts/create-account.mdx"
+            ]
+          },
+          {
+            "group": "Servicios de Kawi",
+            "icon": "layers",
+            "pages": [
+              "es/services/overview.mdx",
+              "es/services/deposits.mdx",
+              "es/services/withdrawals.mdx",
+              "es/services/manage-funds.mdx",
+              "es/services/purchases.mdx"
+            ]
+          },
+          {
+            "group": "Cómo funciona Kawi",
+            "icon": "workflow",
+            "pages": [
+              "es/how-kawi-works/overview.mdx",
+              "es/how-kawi-works/fiat-to-crypto.mdx",
+              "es/how-kawi-works/crypto-to-fiat.mdx",
+              "es/how-kawi-works/crypto-to-crypto.mdx",
+              "es/how-kawi-works/fiat-to-fiat.mdx"
+            ]
+          },
+          {
+            "group": "Infraestructura",
+            "icon": "server",
+            "pages": [
+              "es/infrastructure/kawi-engine.mdx",
+              "es/infrastructure/hybrid-settlement.mdx",
+              "es/infrastructure/liquidity.mdx",
+              "es/infrastructure/why-solana.mdx"
+            ]
+          },
+          {
+            "group": "Desarrolladores",
+            "icon": "code",
+            "pages": [
+              "es/developers/introduction.mdx",
+              "es/developers/authentication.mdx",
+              "es/developers/api-reference.mdx",
+              "es/developers/webhooks.mdx",
+              "es/developers/widget.mdx",
+              "es/developers/lab.mdx",
+              "es/developers/portal.mdx",
+              "es/developers/github.mdx"
             ]
           },
           {
             "group": "Integraciones",
             "icon": "plug",
-            "expanded": true,
             "pages": [
-              "es/integrations/quickstart",
-              "es/integrations/authentication",
-              "es/integrations/connectors/crm",
-              "es/integrations/webhooks/configure"
+              "es/integrations/remittance-as-a-service.mdx",
+              "es/integrations/enterprise.mdx",
+              "es/integrations/b2b-use-cases.mdx"
+            ]
+          },
+          {
+            "group": "Aceleradoras",
+            "icon": "rocket",
+            "pages": [
+              "es/accelerators/waylearn.mdx",
+              "es/accelerators/dev3pack.mdx"
+            ]
+          },
+          {
+            "group": "Roadmap 2026",
+            "icon": "calendar",
+            "pages": [
+              "es/roadmap/q1.mdx",
+              "es/roadmap/q2.mdx",
+              "es/roadmap/q3.mdx",
+              "es/roadmap/q4.mdx"
+            ]
+          },
+          {
+            "group": "Seguridad",
+            "icon": "shield",
+            "pages": [
+              "es/security/overview.mdx"
+            ]
+          },
+          {
+            "group": "Indicadores",
+            "icon": "chart-line",
+            "pages": [
+              "es/metrics/overview.mdx"
+            ]
+          },
+          {
+            "group": "Comunidad",
+            "icon": "users",
+            "pages": [
+              "es/community/social.mdx"
+            ]
+          },
+          {
+            "group": "FAQ",
+            "icon": "help-circle",
+            "pages": [
+              "es/faq/overview.mdx"
             ]
           }
         ]
@@ -157,50 +218,10 @@
               "href": "https://www.mintlify.com/docs/contact-support"
             }
           ]
-        },
-        "groups": [
-          {
-            "group": "Plataforma",
-            "icon": "layers",
-            "expanded": true,
-            "pages": [
-              "pt-BR/platform/quickstart",
-              "pt-BR/platform/key-concepts",
-              "pt-BR/platform/configuration/settings",
-              "pt-BR/platform/configuration/user-management",
-              "pt-BR/platform/administration/roles-permissions"
-            ]
-          },
-          {
-            "group": "Análise",
-            "icon": "chart-bar",
-            "expanded": true,
-            "pages": [
-              "pt-BR/analytics/quickstart",
-              "pt-BR/analytics/connect-data",
-              "pt-BR/analytics/dashboards/create-dashboard",
-              "pt-BR/analytics/reports/scheduled-reports"
-            ]
-          },
-          {
-            "group": "Integrações",
-            "icon": "plug",
-            "expanded": true,
-            "pages": [
-              "pt-BR/integrations/quickstart",
-              "pt-BR/integrations/authentication",
-              "pt-BR/integrations/connectors/crm",
-              "pt-BR/integrations/webhooks/configure"
-            ]
-          }
-        ]
+        }
       }
     ],
     "directory": "card"
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [],

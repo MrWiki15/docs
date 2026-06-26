@@ -1,0 +1,28 @@
+---
+title: "Autenticación"
+sidebarTitle: "Autenticación"
+description: "Todas las peticiones a la API de Kawi requieren autenticación mediante API Key."
+---
+
+Todas las peticiones a la API de Kawi requieren autenticación mediante API Key.
+
+## Header básico
+
+```http
+Authorization: Bearer KAWI_API_KEY
+Content-Type: application/json
+```
+
+## Ejemplo
+
+```bash
+curl https://api.kawi.life/v1/balance \
+  -H "Authorization: Bearer KAWI_API_KEY"
+```
+
+## Buenas prácticas
+
+- No exponer API keys en frontend.
+- Usar variables de entorno.
+- Rotar claves periódicamente.
+- Separar claves de sandbox y producción.
