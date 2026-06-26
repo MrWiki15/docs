@@ -28,13 +28,11 @@
         "language": "es",
         "groups": [
           {
-            "group": "Introducción",
+            "group": "Introduccion",
             "icon": "book-open",
             "pages": [
               "es/introduction/what-is-kawi",
-              "es/introduction/problem.mdx",
-              "es/introduction/what-you-can-do.mdx",
-              "es/introduction/validation.mdx"
+              "es/Introduccion/validation.mdx"
             ]
           },
           {
