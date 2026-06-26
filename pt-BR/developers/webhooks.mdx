@@ -1,0 +1,40 @@
+---
+title: "Webhooks"
+sidebarTitle: "Webhooks"
+description: "Receba notificações automáticas quando um evento ocorre."
+---
+
+Os webhooks permitem receber notificações automáticas quando um evento ocorre.
+
+## Eventos disponíveis
+
+```text
+deposit.created
+deposit.completed
+conversion.started
+conversion.completed
+transfer.sent
+transfer.failed
+withdrawal.completed
+```
+
+## Exemplo de payload
+
+```json
+{
+  "event": "conversion.completed",
+  "data": {
+    "id": "conv_123",
+    "from_currency": "BRL",
+    "to_currency": "USDC",
+    "status": "completed"
+  }
+}
+```
+
+## Boas práticas
+
+- Validar a assinatura do webhook.
+- Responder com HTTP 200.
+- Processar eventos de forma idempotente.
+- Salvar logs dos eventos recebidos.

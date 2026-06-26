@@ -168,7 +168,128 @@
               "href": "https://www.mintlify.com/docs/contact-support"
             }
           ]
-        }
+        },
+        "groups": [
+          {
+            "group": "Introdução",
+            "icon": "book-open",
+            "pages": [
+              "pt-BR/introduction/what-is-kawi.mdx",
+              "pt-BR/introduction/problem.mdx",
+              "pt-BR/introduction/what-you-can-do.mdx",
+              "pt-BR/introduction/validation.mdx"
+            ]
+          },
+          {
+            "group": "Contas",
+            "icon": "user",
+            "pages": [
+              "pt-BR/accounts/account-types.mdx",
+              "pt-BR/accounts/create-account.mdx"
+            ]
+          },
+          {
+            "group": "Serviços da Kawi",
+            "icon": "layers",
+            "pages": [
+              "pt-BR/services/overview.mdx",
+              "pt-BR/services/deposits.mdx",
+              "pt-BR/services/withdrawals.mdx",
+              "pt-BR/services/manage-funds.mdx",
+              "pt-BR/services/purchases.mdx"
+            ]
+          },
+          {
+            "group": "Como a Kawi funciona",
+            "icon": "workflow",
+            "pages": [
+              "pt-BR/how-kawi-works/overview.mdx",
+              "pt-BR/how-kawi-works/fiat-to-crypto.mdx",
+              "pt-BR/how-kawi-works/crypto-to-fiat.mdx",
+              "pt-BR/how-kawi-works/crypto-to-crypto.mdx",
+              "pt-BR/how-kawi-works/fiat-to-fiat.mdx"
+            ]
+          },
+          {
+            "group": "Infraestrutura",
+            "icon": "server",
+            "pages": [
+              "pt-BR/infrastructure/kawi-engine.mdx",
+              "pt-BR/infrastructure/hybrid-settlement.mdx",
+              "pt-BR/infrastructure/liquidity.mdx",
+              "pt-BR/infrastructure/why-solana.mdx"
+            ]
+          },
+          {
+            "group": "Desenvolvedores",
+            "icon": "code",
+            "pages": [
+              "pt-BR/developers/introduction.mdx",
+              "pt-BR/developers/authentication.mdx",
+              "pt-BR/developers/api-reference.mdx",
+              "pt-BR/developers/webhooks.mdx",
+              "pt-BR/developers/widget.mdx",
+              "pt-BR/developers/lab.mdx",
+              "pt-BR/developers/portal.mdx",
+              "pt-BR/developers/github.mdx"
+            ]
+          },
+          {
+            "group": "Integrações",
+            "icon": "plug",
+            "pages": [
+              "pt-BR/integrations/remittance-as-a-service.mdx",
+              "pt-BR/integrations/enterprise.mdx",
+              "pt-BR/integrations/b2b-use-cases.mdx"
+            ]
+          },
+          {
+            "group": "Aceleradoras",
+            "icon": "rocket",
+            "pages": [
+              "pt-BR/accelerators/waylearn.mdx",
+              "pt-BR/accelerators/dev3pack.mdx"
+            ]
+          },
+          {
+            "group": "Roadmap 2026",
+            "icon": "calendar",
+            "pages": [
+              "pt-BR/roadmap/q1.mdx",
+              "pt-BR/roadmap/q2.mdx",
+              "pt-BR/roadmap/q3.mdx",
+              "pt-BR/roadmap/q4.mdx"
+            ]
+          },
+          {
+            "group": "Segurança",
+            "icon": "shield",
+            "pages": [
+              "pt-BR/security/overview.mdx"
+            ]
+          },
+          {
+            "group": "Indicadores",
+            "icon": "chart-line",
+            "pages": [
+              "pt-BR/metrics/overview.mdx"
+            ]
+          },
+          {
+            "group": "Comunidade",
+            "icon": "users",
+            "pages": [
+              "pt-BR/community/social.mdx"
+            ]
+          },
+          {
+            "group": "FAQ",
+            "icon": "help-circle",
+            "pages": [
+              "pt-BR/faq/overview.mdx"
+            ]
+          }
+        ]
       }
     ],
     "directory": "card"
