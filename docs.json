@@ -22,66 +22,16 @@
     "languages": [
       {
         "language": "en",
-        "default": true,
-        "global": {
-          "anchors": [
-            {
-              "anchor": "Home",
-              "icon": "house",
-              "href": "/"
-            },
-            {
-              "anchor": "Changelog",
-              "icon": "scroll-text",
-              "href": "https://www.mintlify.com/docs/changelog"
-            },
-            {
-              "anchor": "Help",
-              "icon": "life-buoy",
-              "href": "https://www.mintlify.com/docs/contact-support"
-            }
-          ]
-        },
-        "groups": [
-          {
-            "group": "Introduction",
-            "icon": "book-open",
-            "pages": []
-          },
-          {
-            "group": "Accounts",
-            "icon": "user",
-            "pages": []
-          }
-        ]
+        "default": true
       },
       {
         "language": "es",
-        "global": {
-          "anchors": [
-            {
-              "anchor": "Inicio",
-              "icon": "house",
-              "href": "/es"
-            },
-            {
-              "anchor": "Registro de cambios",
-              "icon": "scroll-text",
-              "href": "https://www.mintlify.com/docs/changelog"
-            },
-            {
-              "anchor": "Ayuda",
-              "icon": "life-buoy",
-              "href": "https://www.mintlify.com/docs/contact-support"
-            }
-          ]
-        },
         "groups": [
           {
             "group": "Introducción",
             "icon": "book-open",
             "pages": [
-              "es/introduction/what-is-kawi.mdx",
+              "es/introduction/what-is-kawi",
               "es/introduction/problem.mdx",
               "es/introduction/what-you-can-do.mdx",
               "es/introduction/validation.mdx"
