@@ -22,7 +22,7 @@ Los webhooks entregan solicitudes HTTP POST a una URL que tú controlas cada vez
   <Step title="Selecciona los eventos">
     Después de crear el endpoint, ábrelo y haz clic en **Agregar eventos**. Elige los tipos de eventos que deseas que reciba este endpoint. Puedes suscribirte a todos los eventos o seleccionar tipos individuales.
 
-    Consulta [tipos de eventos](/es/integrations/webhooks/event-types) para ver la lista completa y los esquemas de payload.
+    Consulta la referencia de tipos de eventos para ver la lista completa y los esquemas de payload.{/* TODO: link target page `/es/integrations/webhooks/event-types` does not exist yet. */}
   </Step>
   <Step title="Verifica el encabezado de firma">
     Cada solicitud de webhook incluye un encabezado `X-Signature-256` que contiene una firma HMAC-SHA256 del cuerpo de la solicitud, firmada con la clave secreta de tu endpoint.
