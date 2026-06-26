@@ -27,6 +27,7 @@
       {
         "language": "es",
         "pages": [
+          "es/home",
           "",
           {
             "group": "Introduccion",
@@ -149,25 +150,6 @@
       },
       {
         "language": "pt-BR",
-        "global": {
-          "anchors": [
-            {
-              "anchor": "Início",
-              "icon": "house",
-              "href": "/pt-BR"
-            },
-            {
-              "anchor": "Registro de alterações",
-              "icon": "scroll-text",
-              "href": "https://www.mintlify.com/docs/changelog"
-            },
-            {
-              "anchor": "Ajuda",
-              "icon": "life-buoy",
-              "href": "https://www.mintlify.com/docs/contact-support"
-            }
-          ]
-        },
         "groups": [
           {
             "group": "Introdução",
